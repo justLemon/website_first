@@ -1,0 +1,31 @@
+<%- include header %>
+<div id="content-main-page">
+<% if(user){ %>
+<div>
+  <% posts.forEach(function (post, index) { %>
+        <div class="post-section">
+            <div>
+            <p>
+            <a href="#">
+            <%=post.title %>
+            </a></br> 作者 
+            <a href="#">
+            <%=post.name %>
+            </a> | 日期：
+            <%=post.time.minute %>
+            </p>
+            </div>
+            <div>
+            <p>
+            <%- post.post %>
+            </p>
+            </div>
+        </div>
+        <% }) %>
+</div>
+<% }else{ %>
+<p>欢迎来到blog</p>
+<p>请先登陆</p>
+<% } %>
+</div>
+<%- include footer %>

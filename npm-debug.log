@@ -1,0 +1,272 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\New Folder\\nodejs\\node.exe',
+1 verbose cli   'D:\\New Folder\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'supervisor' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of D:\New Folder\nodejs\node_global\package.json
+5 verbose readDependencies loading dependencies from D:\New Folder\nodejs\node_global\package.json
+6 silly cache add args [ 'supervisor', null ]
+7 verbose cache add spec supervisor
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'supervisor',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'supervisor',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed supervisor@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for supervisor
+11 info addNameTag [ 'supervisor', 'latest' ]
+12 silly mapToRegistry name supervisor
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'supervisor',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'supervisor',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/supervisor
+17 verbose addNameTag registry:https://registry.npmjs.org/supervisor not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/supervisor
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 16:45:15
+21 verbose request id c81b62ad87d8f396
+22 http request GET https://registry.npmjs.org/supervisor
+23 http 200 https://registry.npmjs.org/supervisor
+24 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 verbose headers   etag: '"7EG9OA3MM9SQJ9WYH4ZCHIMG1"',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'content-length': '8118',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Thu, 22 Sep 2016 08:45:38 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '249',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-hkg6822-HKG',
+24 verbose headers   'x-cache': 'HIT',
+24 verbose headers   'x-cache-hits': '9',
+24 verbose headers   'x-timer': 'S1474533938.110904,VS0,VE0',
+24 verbose headers   vary: 'Accept-Encoding' }
+25 silly get cb [ 200,
+25 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly get     etag: '"7EG9OA3MM9SQJ9WYH4ZCHIMG1"',
+25 silly get     'content-type': 'application/json',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'content-length': '8118',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Thu, 22 Sep 2016 08:45:38 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '249',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-hkg6822-HKG',
+25 silly get     'x-cache': 'HIT',
+25 silly get     'x-cache-hits': '9',
+25 silly get     'x-timer': 'S1474533938.110904,VS0,VE0',
+25 silly get     vary: 'Accept-Encoding' } ]
+26 verbose get saving supervisor to D:\New Folder\nodejs\node_global\registry.npmjs.org\supervisor\.cache.json
+27 verbose correctMkdir D:\New Folder\nodejs\node_global correctMkdir not in flight; initializing
+28 silly addNameTag next cb for supervisor with tag latest
+29 silly addNamed supervisor@0.11.0
+30 verbose addNamed "0.11.0" is a plain semver version for supervisor
+31 silly mapToRegistry name supervisor
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry data Result {
+34 silly mapToRegistry   raw: 'supervisor',
+34 silly mapToRegistry   scope: null,
+34 silly mapToRegistry   name: 'supervisor',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri https://registry.npmjs.org/supervisor
+36 verbose addRemoteTarball https://registry.npmjs.org/supervisor/-/supervisor-0.11.0.tgz not in flight; adding
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/supervisor/-/supervisor-0.11.0.tgz',
+37 verbose addRemoteTarball   '3fa869e09c57855aff7128a996d414f4af867d8a' ]
+38 info retry fetch attempt 1 at 16:45:15
+39 info attempt registry request try #1 at 16:45:16
+40 http fetch GET https://registry.npmjs.org/supervisor/-/supervisor-0.11.0.tgz
+41 http fetch 200 https://registry.npmjs.org/supervisor/-/supervisor-0.11.0.tgz
+42 silly fetchAndShaCheck shasum 3fa869e09c57855aff7128a996d414f4af867d8a
+43 verbose addTmpTarball C:\Users\PC\AppData\Local\Temp\npm-4436-0553b3d7\registry.npmjs.org\supervisor\-\supervisor-0.11.0.tgz not in flight; adding
+44 verbose addTmpTarball already have metadata; skipping unpack for supervisor@0.11.0
+45 verbose correctMkdir D:\New Folder\nodejs\node_global correctMkdir not in flight; initializing
+46 silly cache afterAdd supervisor@0.11.0
+47 verbose afterAdd D:\New Folder\nodejs\node_global\supervisor\0.11.0\package\package.json not in flight; writing
+48 verbose correctMkdir D:\New Folder\nodejs\node_global correctMkdir not in flight; initializing
+49 verbose afterAdd D:\New Folder\nodejs\node_global\supervisor\0.11.0\package\package.json written
+50 silly install resolved [ { name: 'supervisor',
+50 silly install resolved     version: '0.11.0',
+50 silly install resolved     description: 'A supervisor program for running nodejs programs',
+50 silly install resolved     author: { name: 'Isaac Z. Schlueter', email: 'i@izs.me' },
+50 silly install resolved     license: 'MIT',
+50 silly install resolved     contributors:
+50 silly install resolved      [ [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object],
+50 silly install resolved        [Object] ],
+50 silly install resolved     repository:
+50 silly install resolved      { type: 'git',
+50 silly install resolved        url: 'git://github.com/petruisfan/node-supervisor.git' },
+50 silly install resolved     bugs: { url: 'https://github.com/petruisfan/node-supervisor/issues' },
+50 silly install resolved     homepage: 'https://github.com/petruisfan/node-supervisor/',
+50 silly install resolved     main: 'lib/supervisor.js',
+50 silly install resolved     bin:
+50 silly install resolved      { 'node-supervisor': 'lib/cli-wrapper.js',
+50 silly install resolved        supervisor: 'lib/cli-wrapper.js' },
+50 silly install resolved     engines: { node: '>=0.6.0' },
+50 silly install resolved     scripts: { test: './node_modules/nodeunit/bin/nodeunit test/*.test.js' },
+50 silly install resolved     preferGlobal: true,
+50 silly install resolved     devDependencies: { nodeunit: '~0.9.0' },
+50 silly install resolved     gitHead: 'f22006a038d3c43a81da02bc8ca6b8d868afddfe',
+50 silly install resolved     _id: 'supervisor@0.11.0',
+50 silly install resolved     _shasum: '3fa869e09c57855aff7128a996d414f4af867d8a',
+50 silly install resolved     _from: 'supervisor@latest',
+50 silly install resolved     _npmVersion: '3.9.5',
+50 silly install resolved     _nodeVersion: '6.1.0',
+50 silly install resolved     _npmUser: { name: 'petruisfan', email: 'petru.isfan@gmail.com' },
+50 silly install resolved     dist:
+50 silly install resolved      { shasum: '3fa869e09c57855aff7128a996d414f4af867d8a',
+50 silly install resolved        tarball: 'https://registry.npmjs.org/supervisor/-/supervisor-0.11.0.tgz' },
+50 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+50 silly install resolved     _npmOperationalInternal:
+50 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+50 silly install resolved        tmp: 'tmp/supervisor-0.11.0.tgz_1465185206185_0.45687873754650354' },
+50 silly install resolved     directories: {},
+50 silly install resolved     _resolved: 'https://registry.npmjs.org/supervisor/-/supervisor-0.11.0.tgz' } ]
+51 info install supervisor@0.11.0 into D:\New Folder\nodejs\node_global
+52 info installOne supervisor@0.11.0
+53 verbose installOne of supervisor to D:\New Folder\nodejs\node_global not in flight; installing
+54 verbose correctMkdir D:\New Folder\nodejs\node_global\_locks correctMkdir not in flight; initializing
+55 verbose lock using D:\New Folder\nodejs\node_global\_locks\supervisor-ebec9817d7047a44.lock for D:\New Folder\nodejs\node_global\node_modules\supervisor
+56 silly install write writing supervisor 0.11.0 to D:\New Folder\nodejs\node_global\node_modules\supervisor
+57 verbose unbuild node_modules\supervisor
+58 silly gentlyRm D:\New Folder\nodejs\node_global\node_modules\supervisor is being purged from base D:\New Folder\nodejs\node_global
+59 verbose gentlyRm don't care about contents; nuking D:\New Folder\nodejs\node_global\node_modules\supervisor
+60 verbose tar unpack D:\New Folder\nodejs\node_global\supervisor\0.11.0\package.tgz
+61 verbose tar unpacking to D:\New Folder\nodejs\node_global\node_modules\supervisor
+62 silly gentlyRm D:\New Folder\nodejs\node_global\node_modules\supervisor is being purged
+63 verbose gentlyRm don't care about contents; nuking D:\New Folder\nodejs\node_global\node_modules\supervisor
+64 silly gunzTarPerm modes [ '777', '666' ]
+65 silly gunzTarPerm extractEntry package.json
+66 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+67 silly gunzTarPerm extractEntry .npmignore
+68 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+69 silly gunzTarPerm extractEntry README.md
+70 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+71 silly gunzTarPerm extractEntry LICENSE
+72 silly gunzTarPerm modified mode [ 'LICENSE', 436, 438 ]
+73 silly gunzTarPerm extractEntry lib/cli-wrapper.js
+74 silly gunzTarPerm modified mode [ 'lib/cli-wrapper.js', 509, 511 ]
+75 silly gunzTarPerm extractEntry lib/supervisor.js
+76 silly gunzTarPerm modified mode [ 'lib/supervisor.js', 436, 438 ]
+77 silly gunzTarPerm extractEntry test/fixture.js
+78 silly gunzTarPerm modified mode [ 'test/fixture.js', 436, 438 ]
+79 silly gunzTarPerm extractEntry test/supervisor.test.js
+80 silly gunzTarPerm modified mode [ 'test/supervisor.test.js', 436, 438 ]
+81 silly gunzTarPerm extractEntry test/sampleApp/package.json
+82 silly gunzTarPerm modified mode [ 'test/sampleApp/package.json', 436, 438 ]
+83 silly gunzTarPerm extractEntry test/sampleApp/server.js
+84 silly gunzTarPerm modified mode [ 'test/sampleApp/server.js', 509, 511 ]
+85 verbose write writing to D:\New Folder\nodejs\node_global\node_modules\supervisor\package.json
+86 info preinstall supervisor@0.11.0
+87 verbose readDependencies loading dependencies from D:\New Folder\nodejs\node_global\node_modules\supervisor\package.json
+88 verbose readDependencies loading dependencies from D:\New Folder\nodejs\node_global\node_modules\supervisor\package.json
+89 silly install resolved []
+90 verbose about to build D:\New Folder\nodejs\node_global\node_modules\supervisor
+91 info build D:\New Folder\nodejs\node_global\node_modules\supervisor
+92 info linkStuff supervisor@0.11.0
+93 silly linkStuff supervisor@0.11.0 has D:\New Folder\nodejs\node_global\node_modules as its parent node_modules
+94 silly linkStuff supervisor@0.11.0 is part of a global install
+95 silly linkStuff supervisor@0.11.0 is installed into a global node_modules
+96 silly linkStuff supervisor@0.11.0 is installed into the top-level global node_modules
+97 verbose linkBins supervisor@0.11.0
+98 verbose link bins [ { 'node-supervisor': 'lib/cli-wrapper.js',
+98 verbose link bins     supervisor: 'lib/cli-wrapper.js' },
+98 verbose link bins   'D:\\New Folder\\nodejs\\node_global',
+98 verbose link bins   true ]
+99 verbose linkMans supervisor@0.11.0
+100 verbose rebuildBundles supervisor@0.11.0
+101 verbose unlock done using D:\New Folder\nodejs\node_global\_locks\supervisor-ebec9817d7047a44.lock for D:\New Folder\nodejs\node_global\node_modules\supervisor
+102 verbose stack Error: EISDIR: illegal operation on a directory, open 'D:\New Folder\nodejs\node_global\supervisor'
+102 verbose stack     at Error (native)
+103 verbose cwd C:\Users\PC\Desktop\bootstrap\nodejs\site
+104 error Windows_NT 6.3.9600
+105 error argv "D:\\New Folder\\nodejs\\node.exe" "D:\\New Folder\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "supervisor"
+106 error node v4.4.7
+107 error npm  v2.15.8
+108 error path D:\New Folder\nodejs\node_global\supervisor
+109 error code EISDIR
+110 error errno -4068
+111 error syscall open
+112 error eisdir EISDIR: illegal operation on a directory, open 'D:\New Folder\nodejs\node_global\supervisor'
+112 error eisdir This is most likely not a problem with npm itself
+112 error eisdir and is related to npm not being able to find a package.json in
+112 error eisdir a package you are trying to install.
+113 verbose exit [ -4068, true ]
+114 verbose unbuild node_modules\supervisor
+115 info preuninstall supervisor@0.11.0
+116 info uninstall supervisor@0.11.0
+117 verbose unbuild rmStuff supervisor@0.11.0 from D:\New Folder\nodejs\node_global\node_modules
+118 silly gentlyRm D:\New Folder\nodejs\node_global\node-supervisor.cmd is being gently removed
+119 silly gentlyRm verifying D:\New Folder\nodejs\node_global is an npm working directory
+120 silly gentlyRm D:\New Folder\nodejs\node_global\supervisor.cmd is being gently removed
+121 silly gentlyRm verifying D:\New Folder\nodejs\node_global is an npm working directory
+122 silly gentlyRm containing path D:\New Folder\nodejs\node_global is under npm's control, in D:\New Folder\nodejs\node_global
+123 silly gentlyRm deletion target D:\New Folder\nodejs\node_global\node-supervisor.cmd is under D:\New Folder\nodejs\node_global
+124 verbose gentlyRm vacuuming from D:\New Folder\nodejs\node_global\node-supervisor.cmd up to D:\New Folder\nodejs\node_global
+125 silly gentlyRm containing path D:\New Folder\nodejs\node_global is under npm's control, in D:\New Folder\nodejs\node_global
+126 silly gentlyRm deletion target D:\New Folder\nodejs\node_global\supervisor.cmd is under D:\New Folder\nodejs\node_global
+127 verbose gentlyRm vacuuming from D:\New Folder\nodejs\node_global\supervisor.cmd up to D:\New Folder\nodejs\node_global
+128 silly vacuum-fs removing D:\New Folder\nodejs\node_global\node-supervisor.cmd
+129 silly vacuum-fs removing D:\New Folder\nodejs\node_global\supervisor.cmd
+130 silly vacuum-fs finished vacuuming up to D:\New Folder\nodejs\node_global
+131 silly gentlyRm D:\New Folder\nodejs\node_global\node-supervisor is being gently removed
+132 silly gentlyRm verifying D:\New Folder\nodejs\node_global is an npm working directory
+133 silly gentlyRm containing path D:\New Folder\nodejs\node_global is under npm's control, in D:\New Folder\nodejs\node_global
+134 silly gentlyRm deletion target D:\New Folder\nodejs\node_global\node-supervisor is under D:\New Folder\nodejs\node_global
+135 verbose gentlyRm vacuuming from D:\New Folder\nodejs\node_global\node-supervisor up to D:\New Folder\nodejs\node_global
+136 silly vacuum-fs finished vacuuming up to D:\New Folder\nodejs\node_global
+137 silly gentlyRm D:\New Folder\nodejs\node_global\supervisor is being gently removed
+138 silly gentlyRm verifying D:\New Folder\nodejs\node_global is an npm working directory
+139 silly gentlyRm containing path D:\New Folder\nodejs\node_global is under npm's control, in D:\New Folder\nodejs\node_global
+140 silly gentlyRm deletion target D:\New Folder\nodejs\node_global\supervisor is under D:\New Folder\nodejs\node_global
+141 verbose gentlyRm vacuuming from D:\New Folder\nodejs\node_global\supervisor up to D:\New Folder\nodejs\node_global
+142 silly vacuum-fs removing D:\New Folder\nodejs\node_global\node-supervisor
+143 silly vacuum-fs finished vacuuming up to D:\New Folder\nodejs\node_global
+144 silly vacuum-fs quitting because other entries in D:\New Folder\nodejs\node_global\supervisor
+145 info postuninstall supervisor@0.11.0
+146 silly gentlyRm D:\New Folder\nodejs\node_global\node_modules\supervisor is being purged from base D:\New Folder\nodejs\node_global
+147 verbose gentlyRm don't care about contents; nuking D:\New Folder\nodejs\node_global\node_modules\supervisor
+148 silly vacuum-fs purging D:\New Folder\nodejs\node_global\node_modules\supervisor
+149 silly vacuum-fs quitting because other entries in D:\New Folder\nodejs\node_global\node_modules

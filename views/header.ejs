@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>blog</title>
+    <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/1.css">
+</head>
+
+<body>
+<div id="header-bg">
+<div id="header" >
+    <a href="/">Blog</a>
+<% if(!user){ %>
+    <ul class="mynav">
+        <li><a href="/" class="nav-link">首页</a></li>
+      <li><a href="/login" class="nav-link">登陆</a></li>
+        <li><a href="reg" class="nav-link">注册</a></li>
+    </ul>
+<% }else{ %>
+
+     <ul class="mynav-login">
+        <li><a href="/" class="nav-link"><%= user.name%></a></li>
+        <li><a href="/post" class="nav-link">文章</a></li>
+        <li><a href="/post" class="nav-link">发表</a></li>
+        <li><a href="/logout" class="nav-link">退出</a></li>
+    </ul>
+<% } %>
+</div>
+</div>

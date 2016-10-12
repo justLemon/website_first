@@ -1,0 +1,266 @@
+body {
+	color: #8D9094;
+	font-size: 14px;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+*{
+	font-family: -apple-system,"Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin:0px;
+}
+
+#header-bg{
+	background-color: rgba(0,0,0,0.85);
+}
+#header{
+	//background-color: red;
+	height: 50px;
+	max-width: 1320px;
+	margin:0 auto;
+}
+#header>a{
+	color: #fff;
+	//background-color: red;
+	//display: block;
+	//margin-top: 20px;
+	float: left;
+	text-decoration: none;
+	font-size: 2.6rem;
+	font-weight: 600;
+	line-height: 45px;
+
+}
+
+
+#header ul.mynav{
+	//float: left;
+	//display: inline-block;
+	background-color: gray;
+	margin-left: 100px;
+}
+#header .mynav li{
+	
+	margin-right: 15px;
+	float: left;
+	list-style: none;
+	//background-color: red;
+
+}
+#header .mynav a.nav-link{
+
+	display: inline-block;
+	line-height: 50px;
+	border-radius: 6px;
+	text-align: center;
+	color: #8D9094;
+	font-size: 1.4rem;
+	text-decoration: none;
+	//background-color: rgba(204,153,0,0.6);
+	//border-radius: 6px;
+}
+#header .mynav a:hover {
+	background-color: rgba(0,0,0,0.9);
+	color:#fff;
+}
+
+
+#header ul.mynav-login{
+	float: right;
+	//display: inline-block;
+	//background-color: gray;
+	margin-right: 50px;
+}
+#header .mynav-login li{
+	
+	margin-right: 15px;
+	float: left;
+	list-style: none;
+	//background-color: red;
+
+}
+#header .mynav-login a.nav-link{
+
+	display: inline-block;
+	line-height: 50px;
+	border-radius: 6px;
+	text-align: center;
+	color: #8D9094;
+	font-size: 1.4rem;
+	text-decoration: none;
+	//background-color: rgba(204,153,0,0.6);
+	//border-radius: 6px;
+}
+#header .mynav-login a:hover {
+	background-color: rgba(0,0,0,0.9);
+	color:#fff;
+	
+
+}
+
+
+
+#content-main-page{
+	//background-color: red;
+	min-height: 570px;
+}
+#content-main-page>p{
+	padding-top: 50px;
+	font-size: 2.8rem;
+	//background-color: rgba(0,0,0,0.15);
+	text-align: center;
+}
+#content-main-page .post-section{
+	background-color: rgba(0,0,0,0.05);
+	width: 500px;
+	float: left;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	font-size: 1.1rem;
+}
+#content-main-page .post-section a{
+	text-decoration: none;
+	color: rgb(0,0,0,0.2);
+}
+#content-main-page .post-section a:hover{
+	text-decoration: underline;
+	color: rgba(0,0,0,0.9);
+}
+
+
+.content-post-section{
+	min-height: 570px;
+	text-align: center;
+	color:rgba(0,0,0,0.8);
+	font-size: 1.6rem;
+}
+.content-post-section input{
+    padding:13px;
+	background: rgba(255,255,255,0.3);
+	width: 620px;
+	display: inline-block;
+	margin-bottom: 15px;
+	font-size: 1.0rem;
+	border:1px solid rgba(0,0,0,0.3);
+}
+.content-post-section input[type='submit']{
+	font-size: 1.3rem;
+	width: 250px;
+}
+.content-post-section input[type='submit']:hover{
+	background-color: rgba(0,0,0,0.9);
+	color: white;
+	cursor: pointer;
+}
+
+
+#footer-bg{
+	background-color: rgba(0,0,0,0.85);
+}
+#footer{
+	//background-color: red;
+	height: 30px;
+	max-width: 1320px;
+	margin:0 auto;
+}
+#footer p{
+	color:white;
+	text-align:center;
+}
+
+
+
+.content-login-section{
+	margin:0 auto;
+	width: 330px;
+	padding-top: 50px;
+	//background-color: red;
+}
+.content-login-section p{
+	text-align:center;
+	font-size: 1.8rem;
+	padding-bottom: 15px;
+}
+ .content-login-section input{
+    padding:13px;
+	background: rgba(255,255,255,0.3);
+	width: 300px;
+	display: block;
+	margin-bottom: 15px;
+	font-size: 15px;
+	border:1px solid rgba(0,0,0,0.3);
+}
+.content-login-section button{
+
+    padding:5px 10px;
+    display: inline-block;
+    width: 330px;
+	color: rgba(255,255,255,0.8);
+	margin-bottom: 15px;
+	font-size: 1.6rem;
+	font-weight: 500;
+	background-color: rgba(0,0,0,0.7);
+}
+ .content-login-section button:hover{
+	background-color: rgba(0,0,0,0.9);
+}
+
+
+
+.content-reg-section{
+	margin:0 auto;
+	width: 330px;
+	padding-top: 50px;
+	//background-color: red;
+}
+.content-reg-section p{
+	text-align:center;
+	font-size: 1.8rem;
+	padding-bottom: 15px;
+}
+ .content-reg-section input{
+    padding:13px;
+	background: rgba(255,255,255,0.3);
+	width: 300px;
+	display: block;
+	margin-bottom: 15px;
+	font-size: 15px;
+	border:1px solid rgba(0,0,0,0.3);
+}
+.content-reg-section button{
+
+    padding:5px 10px;
+    display: inline-block;
+    width: 330px;
+	color: rgba(255,255,255,0.8);
+	margin-bottom: 15px;
+	font-size: 1.6rem;
+	font-weight: 500;
+	background-color: rgba(0,0,0,0.7);
+}
+ .content-reg-section button:hover{
+	background-color: rgba(0,0,0,0.9);
+}
+
+
+.content-regsuccess-section p{
+	text-align: center;
+	font-size: 2.6rem;
+	padding-top: 100px;
+}
+.content-regsuccess-section .reg-login{
+	text-align: center;
+	font-size: 1.6rem;
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+.content-regsuccess-section .reg-login a{
+	text-decoration: none;
+	color:white;
+	background-color: rgba(0,0,0,0.6);
+}
+@media (max-width: 991px){ 
+
+}
+@media (max-width: 767px){
+
+}
