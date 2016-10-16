@@ -97,11 +97,65 @@ body {
 
 }
 
+#content-single-page{
+	max-width: 1300px;
+	margin: 0 auto;
+}
+#content-single-page .post-section{
+	background-color: rgba(0,0,0,0.03);
+	padding: 10px;
+	
+	//float: left;
+	text-align: left;
+	margin-top: 23px;
+	margin-left: 15px;
+	font-size: 1.1rem;
+}
+#content-single-page .post-section p{
+	font-size: 1rem;
+}
+#content-single-page .post-section a{
+	text-decoration: none;
+	font-size: 1rem;
+	color: rgba(0,0,80,0.5);
+}
+#content-single-page .post-section a.a_title{
+	font-size: 1.6rem;
+	color:rgba(0,0,10,0.5);
+}
+
 
 
 #content-main-page{
 	//background-color: red;
 	min-height: 570px;
+	max-width: 1300px;
+	margin:0 auto;
+	text-align: center;
+	//background-color: red;
+}
+
+#content-main-page .welcome_box p.title{
+	//background-color: rgba(0,0,0,0.1);
+	font-size: 2.9rem;
+	text-align: center;
+	padding-top: 50px;
+}
+#content-main-page .welcome_box p.info{
+	font-size: 1.6rem;
+	//background-color: red;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 170px;
+}
+#content-main-page .welcome_box .info > a{
+	text-decoration: none;
+	color:inherit;
+
+}
+#content-main-page .welcome_box .info > a:hover{
+	background-color: rgba(0,0,0,0.8);
+	color:#fff;
 }
 #content-main-page>p{
 	padding-top: 50px;
@@ -109,22 +163,53 @@ body {
 	//background-color: rgba(0,0,0,0.15);
 	text-align: center;
 }
+#content-main-page>p.passage_note{
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 0;
+}
+#content-main-page .passage_box{
+	//background-color: red;
+	//height: 800px;
+	width: 770px;
+	margin: 0 auto;
+}
 #content-main-page .post-section{
-	background-color: rgba(0,0,0,0.05);
-	width: 500px;
-	float: left;
-	margin-bottom: 10px;
+	background-color: rgba(0,0,0,0.03);
+	padding: 10px;
+	position: relative;
+	//float: left;
+	text-align: left;
+	margin-top: 23px;
 	margin-left: 15px;
 	font-size: 1.1rem;
 }
+#content-main-page .post-section-2:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+
+#content-main-page .post-section p{
+	font-size: 1rem;
+}
 #content-main-page .post-section a{
 	text-decoration: none;
-	color: rgb(0,0,0,0.2);
+	font-size: 1rem;
+	color: rgba(0,0,80,0.5);
+}
+#content-main-page .post-section a.a_title{
+	font-size: 1.6rem;
+	color:rgba(0,0,10,0.5);
+}
+#content-main-page .post-section a.read_more{
+	
+
 }
 #content-main-page .post-section a:hover{
 	text-decoration: underline;
-	color: rgba(0,0,0,0.9);
+	color: rgba(0,0,0,0.5);
 }
+
+
 
 
 .content-post-section{
@@ -240,6 +325,7 @@ body {
  .content-reg-section button:hover{
 	background-color: rgba(0,0,0,0.9);
 }
+
 
 
 .content-regsuccess-section p{

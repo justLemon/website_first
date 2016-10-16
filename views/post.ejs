@@ -1,4 +1,5 @@
 <%- include header %>
+<% if(!posts){ %>
     <div class="content-post-section">
        <form method="post" >
         标题:<br/>
@@ -9,4 +10,16 @@
         </form>
        </div>
      </div>
+<% }else{ %>
+      <div class="content-post-section">
+           <form method="post" >
+            标题:<br/>
+            <input type="text" name="title" value=<%= posts[0].title%> disabled><br/>
+            正文:<br/>
+            <textarea name="post" rows="20" cols="90"><%= posts[0].post.replace(/<br\/>/g,'\r\n') %></textarea><br/>
+            <input type="submit" value="发表">
+            </form>
+           </div>
+         </div>
+<% } %>
 <%-  include footer %>

@@ -6,11 +6,11 @@ var crypto = require('crypto'),
         Post = require('../models/post.js');
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Post.get(null, function (err, posts) {
+  Post.getByName(null, function (err, posts) {
         if (err) {
           posts = [];
         } 
-        console.log(posts);
+        
         res.render('index', {
           title: '主页',
           user: req.session.user,
@@ -28,6 +28,22 @@ function checkLogin(req, res, next) {
     }
     next();
 }
+
+router.get('/mypages',function(req,res,next){
+   Post.getByName(req.session.user.name, function (err, posts) {
+        if (err) {
+          posts = [];
+        } 
+       
+        res.render('mypages', {
+          title: '文章',
+          user: req.session.user,
+          posts: posts,
+          success: req.flash('success').toString(),
+          error: req.flash('error').toString()
+        });
+      });
+});
 
 router.get('/reg', function(req, res, next) {
    res.render('reg', {
@@ -73,6 +89,8 @@ router.post('/reg', function (req, res) {
           // req.flash('success', '注册成功!');
           // res.redirect('/');
           res.render('reglogin', {
+            title: '登录',
+            user: req.session.user,
             success: req.flash('success').toString(),
             error: req.flash('error').toString()
           });
@@ -110,19 +128,38 @@ router.post('/login', function(req, res, next) {
 });
 
 router.get('/post', function(req, res, next) {
+  console.log(req.params.title);
       res.render('post', {
             title: 'post。。',
             user: req.session.user,
+            posts:null,
             success: req.flash('success').toString(),
             error: req.flash('error').toString()
         });
+});
+
+router.get('/post/:title', function(req, res, next) {
+   Post.getByTitle(req.params.title,function (err, posts) {
+        if (err) {
+          posts = [];
+        } 
+       // console.log(posts);
+        res.render('post', {
+          title: 'single',
+          user: req.session.user,
+          posts: posts,
+          success: req.flash('success').toString(),
+          error: req.flash('error').toString()
+        });
+
+      });
 });
 
 router.post('/post', checkLogin);
 
 router.post('/post', function(req, res, next) {
 	var currentUser = req.session.user,
-          post = new Post(currentUser.name, req.body.title, req.body.post);
+          post = new Post(currentUser.name, req.body.title, req.body.post.replace(/\r\n/g,'<br/>'));
       post.save(function (err) {
         if (err) {
           req.flash('error', err); 
@@ -139,7 +176,54 @@ router.post('/post', function(req, res, next) {
       });
 });
 
+router.post('/post/:title', checkLogin);
 
+router.post('/post/:title', function(req, res, next) {
+  var currentUser = req.session.user,
+          post = new Post(currentUser.name, req.body.title, req.body.post.replace(/\r\n/g,'<br/>'));
+      post.updatepost(function (err) {
+        if (err) {
+          req.flash('error', err); 
+          return res.redirect('/');
+        }
+        // req.flash('success', '发布成功!');
+        // res.redirect('/');
+        res.render('postsuccess', {
+            title: '发表成功',
+            user: req.session.user,
+            success: req.flash('success').toString(),
+            error: req.flash('error').toString()
+        });
+      });
+});
+
+router.get('/checkname/:name',function(req,res,next){
+  User.get(req.params.name, function (err, user) {
+    if (!user) {
+      res.send('yes');//用户名可用
+    }else{
+      res.send('no');
+    }
+  });
+});
+
+router.get('/single/:title',function(req,res,next){
+
+  Post.getByTitle(req.params.title,function (err, posts) {
+        if (err) {
+          posts = [];
+        } 
+       // console.log(posts);
+        res.render('singlepassage', {
+          title: 'single',
+          user: req.session.user,
+          posts: posts,
+          success: req.flash('success').toString(),
+          error: req.flash('error').toString()
+        });
+
+      });
+});
 
 router.get('/logout', function(req, res, next) {
 	 req.session.user = null;

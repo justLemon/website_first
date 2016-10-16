@@ -1,12 +1,25 @@
 <%- include header %>
+
 <div id="content-main-page">
+
 <% if(user){ %>
-<div>
+<div class="welcome_box">
+   <p class="title">欢迎来到blog系统</p>
+   <p class="info">这是一个供用户发表博客的多用户微型博客系统</p>
+</div>
+<% }else{ %>
+<div class="welcome_box">
+<p class="title">欢迎来到blog系统</p>
+<p class="info">请先<a href="/login">登陆</a></p>
+</div>
+<% } %>
+<p class="passage_note">最近文章</p>
+<div class="passage_box">
   <% posts.forEach(function (post, index) { %>
         <div class="post-section">
             <div>
             <p>
-            <a href="#">
+            <a href="/single/<%= post.title%>" class="a_title">
             <%=post.title %>
             </a></br> 作者 
             <a href="#">
@@ -17,15 +30,14 @@
             </div>
             <div>
             <p>
-            <%- post.post %>
+           <%- post.post.substring(1,100).replace(/<br\/>/g,'') %>
+            <a href="/single/<%= post.title%>"+ class="read_more">......   阅读全文</a>
             </p>
             </div>
         </div>
         <% }) %>
+        <div style="clear:both"></div>
 </div>
-<% }else{ %>
-<p>欢迎来到blog</p>
-<p>请先登陆</p>
-<% } %>
+
 </div>
 <%- include footer %>
