@@ -1,0 +1,25 @@
+<%- include header %>
+
+<div id="content-single-page">
+
+ <div class="post-section">
+            <div>
+            <p>
+            <a href="#" class="a_title">
+            <%=posts[0].title %>
+            </a></br> 作者 
+            <a href="#">
+            <%=posts[0].name %>
+            </a> | 日期：
+            <%=posts[0].time.minute %>
+            </p>
+            </div>
+            <div>
+            <p>
+           <%- posts[0].post %>
+            
+            </p>
+            </div>
+        </div>
+</div>
+<%- include footer %>

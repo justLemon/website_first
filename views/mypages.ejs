@@ -1,0 +1,37 @@
+<%- include header %>
+
+<div id="content-main-page">
+
+<% if(user){ %>
+
+<p class="passage_note">最近文章</p>
+<div class="passage_box">
+  <% posts.forEach(function (post, index) { %>
+        <div class="post-section post-section-2">
+            <div>
+            <p>
+            <a href="/single/<%= post.title%>" class="a_title">
+            <%=post.title %>
+            </a></br> 作者 
+            <a href="#">
+            <%=post.name %>
+            </a> | 日期：
+            <%=post.time.minute %>
+            </p>
+            </div>
+            <div>
+            <p>
+           <%- post.post.substring(1,100).replace(/<br\/>/g,'') %>......
+            <a href="/post/<%= post.title%>"+ class="read_more">编辑</a>
+            </p>
+            </div>
+
+        </div>
+        <% }) %>
+        <div style="clear:both"></div>
+</div>
+
+</div>
+<% } %>
+</div>
+<%- include footer %>
