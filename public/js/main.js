@@ -1,3 +1,5 @@
+
+//register page
 function checkEmailWritten(){
 	if(!document.getElementById('email_input'))
 		return;
@@ -14,7 +16,7 @@ function checkEmailWritten(){
 	}
 
 }
-
+//register page
 function checkNameNotExisted(){
 	if(!document.getElementById('name_input')) return;
 	var name_input = document.getElementById('name_input');
@@ -36,8 +38,25 @@ function checkNameNotExisted(){
 	}
 	
 }
+//main page
+function addTabPanelEventListenner(){
+	$(".cmpr_nav_link").click(function(){
+		$(".cmpr_nav_link").each(function(){
+			$(this).removeClass('cmpr_nl_active');
+		});
+		$(".tab-panel").css("display", "none");
+		switch(this.dataset.desA){
+			case 'monthly': $(".tab-panel:eq(2)").css("display", "block");break;
+			case 'weekly': $(".tab-panel:eq(1)").css("display", "block");break;
+			case 'daily': $(".tab-panel:eq(0)").css("display", "block");break;
+			default: break;
+		}
+		$(this).addClass('cmpr_nl_active');
+	});
+}
 
-window.onload = function(){
+$(document).ready(function(){
+	addTabPanelEventListenner();
 	checkEmailWritten();
 	checkNameNotExisted();
-}
+});

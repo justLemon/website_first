@@ -1,43 +1,116 @@
 <%- include header %>
 
-<div id="content-main-page">
+<div class="content-main-page">
 
 <% if(user){ %>
-<div class="welcome_box">
-   <p class="title">欢迎来到blog系统</p>
-   <p class="info">这是一个供用户发表博客的多用户微型博客系统</p>
+<div class="">
+   
 </div>
 <% }else{ %>
-<div class="welcome_box">
-<p class="title">欢迎来到blog系统</p>
-<p class="info">请先<a href="/login">登陆</a></p>
+<div class="">
+   
 </div>
 <% } %>
-<p class="passage_note">最近文章</p>
-<div class="passage_box">
-  <% posts.forEach(function (post, index) { %>
-        <div class="post-section">
-            <div>
-            <p>
-            <a href="/single/<%= post.title%>" class="a_title">
-            <%=post.title %>
-            </a></br> 作者 
-            <a href="#">
-            <%=post.name %>
-            </a> | 日期：
-            <%=post.time.minute %>
-            </p>
-            </div>
-            <div>
-            <p>
-           <%- post.post.substring(1,100).replace(/<br\/>/g,'') %>
-            <a href="/single/<%= post.title%>"+ class="read_more">......   阅读全文</a>
-            </p>
-            </div>
+<div class="cmp_wrapper_right">
+  <div class="cmpr_panel_content">
+    <ul class="cmpr_nav clearfix">
+      <li><a class="cmpr_nav_link cmpr_nl_active" data-des-a="daily" href="javascript:void(0)">今日最热</a></li>
+      <li><a class="cmpr_nav_link" data-des-a="weekly" href="javascript:void(0)">本周最热</a></li>
+      <li><a class="cmpr_nav_link " data-des-a="monthly" href="javascript:void(0)">本月最热</a></li>
+    </ul>
+    <div class="tab-panel"  style="display:block">
+        <div class="cmp_passage_box clearfix">
+          <% posts.forEach(function (post, index) { %>
+                <div class="post-section">
+                    <div>
+                    <p>
+                    <a href="/single/<%= post.title%>" class="a_title">
+                    <%=post.title %>
+                    </a></br> 作者 
+                    <a href="#">
+                    <%=post.name %>
+                    </a> | 日期：
+                    <%=post.time.minute %>
+                    </p>
+                    </div>
+                    <div>
+                    <p>
+                   <%- post.post.substring(1,100).replace(/<br\/>/g,'') %>
+                    <a href="/single/<%= post.title%>"+ class="read_more">......   阅读全文</a>
+                    </p>
+                    </div>
+                </div>
+                <% }) %>
         </div>
-        <% }) %>
-        <div style="clear:both"></div>
+    </div>
+    <div class="tab-panel" style="display:none">
+        <div class="cmp_passage_box clearfix">
+          <% posts.forEach(function (post, index) { %>
+                <div class="post-section">
+                    <div>
+                    <p>
+                    <a href="/single/<%= post.title%>" class="a_title">
+                    <%=post.title %>
+                    </a></br> 作者 
+                    <a href="#">
+                    <%=post.name %>
+                    </a> | 日期：
+                    <%=post.time.minute %>
+                    </p>
+                    </div>
+                    <div>
+                    <p>
+                   <%- post.post.substring(1,100).replace(/<br\/>/g,'') %>
+                    <a href="/single/<%= post.title%>"+ class="read_more">......   阅读全文</a>
+                    </p>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <div class="tab-panel"  style="display:none">
+        <div class="cmp_passage_box clearfix">
+          <% posts.forEach(function (post, index) { %>
+                <div class="post-section">
+                    <div>
+                    <p>
+                    <a href="/single/<%= post.title%>" class="a_title">
+                    <%=post.title %>
+                    </a></br> 作者 
+                    <a href="#">
+                    <%=post.name %>
+                    </a> | 日期：
+                    <%=post.time.minute %>
+                    </p>
+                    </div>
+                    <div>
+                    <p>
+                   <%- post.post.substring(1,100).replace(/<br\/>/g,'') %>
+                    <a href="/single/<%= post.title%>"+ class="read_more">......   阅读全文</a>
+                    </p>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+  </div>
 </div>
+<div class="cmp_wrapper_left">
+  <div class="cmpl_panel_classify">
+    <p>博文分类</p>
+    <div class="cmpl_line"></div>
+    <ul>
+      <li><a href="/"><i class="fa fa-lg fa-mobile"></i><span>移动开发</span></a></li>
+      <li><a href="/"><i class="fa fa-lg fa-cloud"></i><span>云计算</span></a></li>
+      <li><a href="/"><i class="fa fa-lg fa-database"></i><span>数据库</span></a></li> 
+      <li><a href="/"><i class="fa fa-lg fa-internet-explorer"></i><span>互联网</span></a></li>
+      <li><a href="/"><i class="fa fa-lg fa-language"></i><span>编程语言</span></a></li>
+      <li><a href="/"><i class="fa fa-lg fa-cube"></i><span>Web前端</span></a></li>
+    </ul>
+  </div>
+</div>
+
+
 
 </div>
 <%- include footer %>
